@@ -67,7 +67,7 @@ aws cloudformation deploy --template-file template.yaml --stack-name vpc-network
 ## 🧪 Test Connectivity (Comandos de Validación)
 Una vez desplegada la infraestructura, accedemos a la instancia privada mediante **AWS Systems Manager (SSM)** y ejecutamos las siguientes pruebas para certificar la red:
 
-### 3. Conectividad de Red (Reachability)
+## 3. Conectividad de Red (Reachability)
 
 # 1. Verificar conectividad interna (Ping entre instancias privadas)
 ```bash
