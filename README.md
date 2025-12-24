@@ -64,7 +64,33 @@ PS C:\proyectos-aws\proyect-04-vpc-networking-cfn-iac>
 ```bash
 aws cloudformation deploy --template-file template.yaml --stack-name vpc-networking --capabilities CAPABILITY_IAM
 ```
-### 3. Limpieza (delete)
+## 🧪 Test Connectivity (Comandos de Validación)
+Una vez desplegada la infraestructura, accedemos a la instancia privada mediante **AWS Systems Manager (SSM)** y ejecutamos las siguientes pruebas para certificar la red:
+
+### 1. Conectividad de Red (Reachability)
+
+# 1. Verificar conectividad interna (Ping entre instancias privadas)
+```bash
+ping 10.0.0.242 -c 5
+```
+
+# 2. Confirmar salida a Internet (Validación de NAT Gateway)
+# Si responde, la instancia privada tiene acceso a internet para actualizaciones.
+```bash
+ping example.com -c 5
+```
+# 3. Prueba de latencia hacia IP Pública específica
+```bash
+ping 52.23.201.228 
+```
+# 4. Validar VPC Interface Endpoint para KMS
+# IMPORTANTE: La respuesta debe ser una IP Privada (10.x.x.x), 
+# confirmando que el tráfico NO sale a la internet pública.
+```bash
+dig kms.us-east-1.amazonaws.com
+```
+### 3. Limpieza (Clean Up)
+Para eliminar todos los recursos y evitar costos (especialmente del NAT Gateway), ejecuta:
 ```bash
 aws cloudformation delete-stack --stack-name vpc-networking
 ```
