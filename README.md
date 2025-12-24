@@ -41,7 +41,7 @@ No basta con desplegar, hay que validar. Estas son las pruebas de conectividad r
 ### 1. Prueba de Salida Segura (NAT Gateway)
 Desde una instancia en la **Subnet Privada** (sin IP pública), logramos conexión a internet. Esto confirma que el enrutamiento a través del NAT Gateway funciona correctamente.
 
-![Ping Test](tes-cli-private-ping.PNG)
+![Ping Test](tes-private-ping.PNG)
 *(El ping exitoso demuestra salida a internet, mientras la instancia permanece invisible al exterior).*
 
 ### 2. Privacidad DNS (VPC Endpoints)
