@@ -2,11 +2,11 @@
 
 ![Architecture Diagram](arquitectura-vpc.png)
 
-## 📖 La Historia del Proyecto
+## 1️⃣ Historia del Proyecto
 
 En el mundo Cloud, es fácil ejecutar un script y ver cómo se crea la magia. Pero como Ingeniera Cloud, creo firmemente en la regla: **"No automatices lo que no entiendes"**.
 
-Este proyecto, **Project-04**, constó de dos fases intensivas:
+Este proyecto, **aws-vpc-network-iac**, constó de dos fases intensivas:
 
 1.  **Fase Manual (The Deep Dive):** Primero, construí esta arquitectura de red completa "a mano" en la consola de AWS. Configuré cada Subnet, Route Table y NAT Gateway individualmente.
     * *Objetivo:* Entender el flujo real de cada paquete de datos y visualizar la seguridad por capas.
@@ -16,7 +16,7 @@ El resultado es una plantilla robusta que reduce un despliegue manual de 45 minu
 
 ---
 
-## 🏗️ Arquitectura Desplegada
+## 2️⃣ Arquitectura Desplegada
 
 La plantilla `template.yaml` aprovisiona una **VPC de Alta Disponibilidad** diseñada para entornos de producción seguros:
 
@@ -34,7 +34,7 @@ La plantilla `template.yaml` aprovisiona una **VPC de Alta Disponibilidad** dise
 
 ---
 
-## 🧪 Validación Técnica (Evidence)
+## 3️⃣ Validación Técnica (Evidence)
 
 No basta con desplegar, hay que validar. Estas son las pruebas de conectividad realizadas:
 
@@ -51,7 +51,7 @@ Validación de resolución DNS interna para AWS KMS. Al usar `dig`, vemos que la
 
 ---
 
-## 🚀 Guía de Despliegue (Quick Start)
+## 4️⃣ Guía de Despliegue (Quick Start)
 
 Si deseas replicar esta infraestructura en tu cuenta AWS:
 
@@ -64,7 +64,7 @@ PS C:\proyectos-aws\proyect-04-vpc-networking-cfn-iac>
 ```bash
 aws cloudformation deploy --template-file template.yaml --stack-name vpc-networking --capabilities CAPABILITY_IAM
 ```
-## 🧪 Test Connectivity (Comandos de Validación)
+## 5️⃣ Test Connectivity (Comandos de Validación)
 Una vez desplegada la infraestructura, accedemos a la instancia privada mediante **AWS Systems Manager (SSM)** y ejecutamos las siguientes pruebas para certificar la red:
 
 ### 1. Verificar conectividad interna (Ping entre instancias privadas)
@@ -87,7 +87,7 @@ confirmando que el tráfico NO sale a la internet pública.
 ```bash
 dig kms.us-east-1.amazonaws.com
 ```
-### 5. Limpieza (Clean Up)
+### 6️⃣ Limpieza de Recursos (Clean Up)
 Para eliminar todos los recursos y evitar costos (especialmente del NAT Gateway), ejecuta:
 ```bash
 aws cloudformation delete-stack --stack-name vpc-networking
