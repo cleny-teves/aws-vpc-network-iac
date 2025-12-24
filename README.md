@@ -8,11 +8,22 @@ En el mundo Cloud, es fácil ejecutar un script y ver cómo se crea la magia. Pe
 
 Este proyecto, **aws-vpc-network-iac**, constó de dos fases intensivas:
 
-1.  **Fase Manual (The Deep Dive):** Primero, construí esta arquitectura de red completa "a mano" en la consola de AWS. Configuré cada Subnet, Route Table y NAT Gateway individualmente.
-    * *Objetivo:* Entender el flujo real de cada paquete de datos y visualizar la seguridad por capas.
-2.  **Fase Automatizada (The Scale Up):** Una vez dominados los fundamentos, traduje toda esa lógica a **Infraestructura como Código (IaC)** usando **AWS CloudFormation**.
+### 🔍 Fase 1: Manual Deep Dive
+Primero, construí toda la arquitectura de red manualmente desde la consola de AWS, configurando uno a uno:
+* Subnets
+* Route Tables
+* Internet Gateway
+* NAT Gateway
+* VPC Endpoints
 
-El resultado es una plantilla robusta que reduce un despliegue manual de 45 minutos a solo 3 minutos, sin errores humanos.
+**🎯 Objetivo:**
+Comprender el flujo real de los paquetes de red y visualizar la seguridad por capas antes de automatizar.
+
+### ⚙️ Fase 2: IaC Automation (Scale Up)
+Una vez dominados los fundamentos, traduje toda la arquitectura a **Infraestructura como Código (IaC)** utilizando **AWS CloudFormation**.
+
+**✅ Resultado:**
+Un despliegue que pasó de **45 minutos manuales a ~3 minutos**, totalmente reproducible y sin errores humanos.
 
 ---
 
