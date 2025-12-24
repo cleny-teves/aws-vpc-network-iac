@@ -47,7 +47,7 @@ Desde una instancia en la **Subnet Privada** (sin IP pública), logramos conexi�
 ### 2. Privacidad DNS (VPC Endpoints)
 Validación de resolución DNS interna para AWS KMS. Al usar `dig`, vemos que la respuesta es una IP privada (`10.x.x.x`), confirmando que el tráfico no sale de la red de AWS.
 
-![DNS Dig Test](cli-endpoint-private-kms-s3-3.PNG)
+![DNS Dig Test](cli-endpoint-private-kms.PNG)
 
 ---
 
