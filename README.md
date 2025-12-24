@@ -69,21 +69,21 @@ Una vez desplegada la infraestructura, accedemos a la instancia privada mediante
 
 ## 3. Conectividad de Red (Reachability)
 
-# 1. Verificar conectividad interna (Ping entre instancias privadas)
+### 1. Verificar conectividad interna (Ping entre instancias privadas)
 ```bash
 ping 10.0.0.242 -c 5
 ```
 
-# 2. Confirmar salida a Internet (Validación de NAT Gateway)
+### 2. Confirmar salida a Internet (Validación de NAT Gateway)
 Si responde, la instancia privada tiene acceso a internet para actualizaciones.
 ```bash
 ping example.com -c 5
 ```
-# 3. Prueba de latencia hacia IP Pública específica
+### 3. Prueba de latencia hacia IP Pública específica
 ```bash
 ping 52.23.201.228 
 ```
-# 4. Validar VPC Interface Endpoint para KMS
+### 4. Validar VPC Interface Endpoint para KMS
 IMPORTANTE: La respuesta debe ser una IP Privada (10.x.x.x), 
 confirmando que el tráfico NO sale a la internet pública.
 ```bash
