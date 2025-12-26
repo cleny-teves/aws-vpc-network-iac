@@ -1,4 +1,4 @@
-# Arquitectura de Red Empresarial en AWS — De la comprensión manual a la automatización con IaC 🚀
+# 🚀 Arquitectura de Red Empresarial en AWS | De la comprensión manual a IaC con CloudFormation
 
 ![Architecture Diagram](arquitectura-vpc.png)
 
