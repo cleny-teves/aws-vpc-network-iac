@@ -49,13 +49,15 @@ La plantilla `template.yaml` aprovisiona una **VPC de Alta Disponibilidad** dise
 
 No basta con desplegar, hay que validar. Estas son las pruebas de conectividad realizadas:
 
-### 1. Prueba de Salida Segura (NAT Gateway)
+### ✅ 3.1 Prueba de Salida Segura (NAT Gateway)
 Desde una instancia en la **Subnet Privada** (sin IP pública), logramos conexión a internet. Esto confirma que el enrutamiento a través del NAT Gateway funciona correctamente.
 
 ![Ping Test](tes-private-ping.PNG)
 *(El ping exitoso demuestra salida a internet, mientras la instancia permanece invisible al exterior).*
 
-### 2. Privacidad DNS (VPC Endpoints)
+### .
+
+🔐 3.2 Privacidad DNS (VPC Endpoints)
 Validación de resolución DNS interna para AWS KMS. Al usar `dig`, vemos que la respuesta es una IP privada (`10.x.x.x`), confirmando que el tráfico no sale de la red de AWS.
 
 ![DNS Dig Test](cli-endpoint-private-kms.PNG)
