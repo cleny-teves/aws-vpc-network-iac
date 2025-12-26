@@ -15,22 +15,22 @@ El proyecto se desarrolló en dos fases bien definidas:
 
 ### 🔍 Fase 1: Manual Deep Dive
 Construcción completa de la arquitectura de red desde la consola de AWS:
-* - Creación de la VPC
-* - Diseño de subredes públicas y privadas
-* - Control del tráfico a nivel de subred con Network ACLs 
-* - Configuración de tablas de ruteo
-* - Implementación de NAT Gateway
-* -  Lanzar instancias EC2
-* - Pruebas reales de conectividad
+* Creación de la VPC
+* Diseño de subredes públicas y privadas
+* Control del tráfico a nivel de subred con Network ACLs 
+* Configuración de tablas de ruteo
+* Implementación de NAT Gateway
+* Lanzar instancias EC2
+* Pruebas reales de conectividad
 
 **🎯 Objetivo:**
 Comprender el flujo real de los paquetes de red y visualizar la seguridad por capas antes de automatizar.
 
 ### ⚙️ Fase 2: IaC Automation (Scale Up)
 Una vez dominados los fundamentos, toda la arquitectura fue traducida a **AWS CloudFormation**, logrando:
-* - Despliegues reproducibles
-* - Eliminación de errores manuales
-* - Reducción del tiempo de despliegue de ~45 minutos a ~3 minutos
+* Despliegues reproducibles
+* Eliminación de errores manuales
+* Reducción del tiempo de despliegue de ~45 minutos a ~3 minutos
 
 ---
 
